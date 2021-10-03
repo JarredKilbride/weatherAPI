@@ -39,6 +39,7 @@ window.addEventListener('load',()=> {
         const currentIcon = icon.replace(/\s+/g, '_').toUpperCase()
         console.log(currentIcon)
         skycons.play(); 
-        return skycons.set(id,Skycons.currentIcon)
+        console.log(Skycons[currentIcon])
+        return skycons.set(id,Skycons[currentIcon])
     }
 })
