@@ -4,6 +4,7 @@ window.addEventListener('load',()=> {
     let tempDesc = document.querySelector(`.temperature-description`); 
     let tempDegree = document.querySelector(`.temperature-degree`);
     let locTime = document.querySelector(`.location-timezone`);
+    let image = document.querySelector('.icon1')
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(po => {
@@ -22,10 +23,22 @@ window.addEventListener('load',()=> {
                     tempDegree.innerHTML = feelslike_f; 
                     tempDesc.innerHTML = condition.text
                     locTime.innerHTML = data.location.region
+                    //image.src = data.current.icon
+
+                    //set icon
+                    seticon(data.current.condition.text,document.querySelector(`.icon`))
                 })
         })
     }
     else {
         alert('you need to me to see your loction!')
+    }
+
+    function seticon(icon,id) {
+        const skycons = new Skycons({"color":'white'}); 
+        const currentIcon = icon.replace(/\s+/g, '_').toUpperCase()
+        console.log(currentIcon)
+        skycons.play(); 
+        return skycons.set(id,Skycons.currentIcon)
     }
 })

@@ -527,7 +527,7 @@
         this.resizeClear = !!(opts && opts.resizeClear);
       };
 
-  Skycons.CLEAR_DAY = function(ctx, t, color) {
+  Skycons.SUNNY = function(ctx, t, color) {
     var w = ctx.canvas.width,
         h = ctx.canvas.height,
         s = Math.min(w, h);
