@@ -23,7 +23,7 @@ window.addEventListener('load',()=> {
                     const{condition,feelslike_c,feelslike_f} = data.current
                     tempDegree.innerHTML = feelslike_f; 
                     tempDesc.innerHTML = condition.text
-                    locTime.innerHTML = data.location.region
+                    locTime.innerHTML = data.location.name
                     //image.src = data.current.icon
 
                     //set icon
