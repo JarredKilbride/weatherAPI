@@ -543,7 +543,7 @@
     moon(ctx, t, w * 0.5, h * 0.5, s, s * STROKE, color);
   };
 
-  Skycons.PARTLY_CLOUDY_DAY = function(ctx, t, color) {
+  Skycons.PARTLY_CLOUDY = function(ctx, t, color) {
     var w = ctx.canvas.width,
         h = ctx.canvas.height,
         s = Math.min(w, h);
